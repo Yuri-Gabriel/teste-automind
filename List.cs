@@ -1,13 +1,13 @@
 namespace MyProject;
 
-class Gerencia<T> {
+class List<T> {
     private Node<T>? head;
 
-    public Gerencia() {
+    public List() {
         this.head = null;
     }
     
-    public void cadastrar(T value) {
+    public void add(T value) {
         if(this.head == null) {
             this.head = new Node<T>(value);
             return;
@@ -16,10 +16,21 @@ class Gerencia<T> {
         Node<T>? current = this.head;
         while(current != null) {
             if(current.next == null) {
-                current.next = new Node<T>(value);
+                Node<T> newNode = new Node<T>(value);
+                newNode.prev = current;
+                current.next = newNode;
                 return;
             }
             current = current.next;
+        }
+    }
+
+    public void remove(T value) {
+        Node<T> current = this.head;
+        while(current != null) {
+            if(current.value == value) {
+                current.prev = current.next;
+            }
         }
     }
 

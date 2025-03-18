@@ -7,3 +7,13 @@
 /home/diuri/Documentos/csharp/MyProject/bin/Debug/net48/MyProject.pdb
 /home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.exe
 /home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.pdb
+/workspaces/teste-automind/bin/Debug/net48/MyProject.exe.config
+/workspaces/teste-automind/bin/Debug/net48/MyProject.exe
+/workspaces/teste-automind/bin/Debug/net48/MyProject.pdb
+/workspaces/teste-automind/obj/Debug/net48/MyProject.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/teste-automind/obj/Debug/net48/MyProject.AssemblyInfoInputs.cache
+/workspaces/teste-automind/obj/Debug/net48/MyProject.AssemblyInfo.cs
+/workspaces/teste-automind/obj/Debug/net48/MyProject.csproj.CoreCompileInputs.cache
+/workspaces/teste-automind/obj/Debug/net48/MyProject.sourcelink.json
+/workspaces/teste-automind/obj/Debug/net48/MyProject.exe
+/workspaces/teste-automind/obj/Debug/net48/MyProject.pdb
