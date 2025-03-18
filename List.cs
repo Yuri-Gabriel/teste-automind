@@ -16,7 +16,7 @@ class List<T> {
         Node<T>? current = this.head;
         while(current != null) {
             if(current.next == null) {
-                Node<T> newNode = new Node<T>(value);
+                Node<T>? newNode = new Node<T>(value);
                 newNode.prev = current;
                 current.next = newNode;
                 return;
@@ -26,9 +26,9 @@ class List<T> {
     }
 
     public void remove(T value) {
-        Node<T> current = this.head;
+        Node<T>? current = this.head;
         while(current != null) {
-            if(current.value == value) {
+            if(true) {
                 current.prev = current.next;
             }
         }
