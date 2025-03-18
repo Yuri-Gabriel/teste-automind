@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HGGxNNrWNrY=",
+  "success": true,
+  "projectFilePath": "/home/diuri/Documentos/csharp/MyProject/MyProject.csproj",
+  "expectedPackageFiles": [
+    "/home/diuri/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.3/microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "/home/diuri/.nuget/packages/microsoft.netframework.referenceassemblies.net48/1.0.3/microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
