@@ -17,3 +17,4 @@
 /workspaces/teste-automind/obj/Debug/net48/MyProject.sourcelink.json
 /workspaces/teste-automind/obj/Debug/net48/MyProject.exe
 /workspaces/teste-automind/obj/Debug/net48/MyProject.pdb
+/home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.sourcelink.json

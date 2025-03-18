@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/teste-automind/MyProject.csproj": {}
+    "/home/diuri/Documentos/csharp/MyProject/MyProject.csproj": {}
   },
   "projects": {
-    "/workspaces/teste-automind/MyProject.csproj": {
+    "/home/diuri/Documentos/csharp/MyProject/MyProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/teste-automind/MyProject.csproj",
+        "projectUniqueName": "/home/diuri/Documentos/csharp/MyProject/MyProject.csproj",
         "projectName": "MyProject",
-        "projectPath": "/workspaces/teste-automind/MyProject.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/teste-automind/obj/",
+        "projectPath": "/home/diuri/Documentos/csharp/MyProject/MyProject.csproj",
+        "packagesPath": "/home/diuri/.nuget/packages/",
+        "outputPath": "/home/diuri/Documentos/csharp/MyProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "/home/diuri/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net48"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net48": {
@@ -50,7 +51,7 @@
               "autoReferenced": true
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

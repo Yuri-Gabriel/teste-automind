@@ -11,5 +11,14 @@ class Program {
         g.forEach(value => {
             Console.WriteLine($"Nome: {value.nome} | Email: {value.email} | Idade: {value.idade}");
         });
+
+        g.forEach(value => {
+            
+        });
+
+        Console.WriteLine();
+        g.forEach(value => {
+            Console.WriteLine($"Nome: {value.nome} | Email: {value.email} | Idade: {value.idade}");
+        });
     }
 }

@@ -2,9 +2,11 @@ namespace MyProject;
 
 class List<T> {
     private Node<T>? head;
+    private int lenght;
 
     public List() {
         this.head = null;
+        this.lenght = 0;
     }
     
     public void add(T value) {
@@ -19,19 +21,22 @@ class List<T> {
                 Node<T>? newNode = new Node<T>(value);
                 newNode.prev = current;
                 current.next = newNode;
+                this.lenght++;
                 return;
             }
             current = current.next;
         }
+        this.resetIndexes();
     }
 
-    public void remove(T value) {
+    public void remove(int index) {
         Node<T>? current = this.head;
         while(current != null) {
-            if(true) {
+            if(current.index == index) {
                 current.prev = current.next;
             }
         }
+        this.resetIndexes();
     }
 
     public void show() {
@@ -47,6 +52,16 @@ class List<T> {
 		while(current != null) {
 			action(current.value);
 			current = current.next;
+		}
+    }
+
+    private void resetIndexes() {
+        int i = 0;
+        Node<T>? current = this.head;
+		while(current != null) {
+			current.index = i;
+			current = current.next;
+            i++;
 		}
     }
 }
