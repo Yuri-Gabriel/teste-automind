@@ -2,23 +2,19 @@
 
 class Program {
     public static void Main(string[] args) {
-        List<Usuario> g = new List<Usuario>();
+        Gerenciador g = new Gerenciador();
 
-        g.add(new Usuario("yuri", "yuri1234@gmail.com", 18));
-        g.add(new Usuario("joao", "joao@hotmail.com", 12));
-        g.add(new Usuario("mario", "mario10@outlook.com", 22));
+        g.addUsuario("yuri", "yuri@1234gmail.com", 18);
+        g.addUsuario("joao", "joao@hotmail.com", 12);
+        g.addUsuario("mario", "mario10@outlook.com", 22);
 
-        g.forEach(value => {
-            Console.WriteLine($"Nome: {value.nome} | Email: {value.email} | Idade: {value.idade}");
-        });
+        g.exibirUsuarios();
 
-        g.forEach(value => {
-            
-        });
+        
 
-        Console.WriteLine();
-        g.forEach(value => {
-            Console.WriteLine($"Nome: {value.nome} | Email: {value.email} | Idade: {value.idade}");
-        });
+        g.removerUsuario("joao@hotmail.com");
+        g.exibirUsuarios();
+        Usuario? user = g.getUsuario(0);
+        g.exibirUmUsuario(user.email);
     }
 }

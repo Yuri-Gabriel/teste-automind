@@ -17,4 +17,12 @@
 /workspaces/teste-automind/obj/Debug/net48/MyProject.sourcelink.json
 /workspaces/teste-automind/obj/Debug/net48/MyProject.exe
 /workspaces/teste-automind/obj/Debug/net48/MyProject.pdb
-/home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.sourcelink.json
+/home/diuri/Documentos/teste-automind-main/bin/Debug/net48/MyProject.exe.config
+/home/diuri/Documentos/teste-automind-main/bin/Debug/net48/MyProject.exe
+/home/diuri/Documentos/teste-automind-main/bin/Debug/net48/MyProject.pdb
+/home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.GeneratedMSBuildEditorConfig.editorconfig
+/home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.AssemblyInfoInputs.cache
+/home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.AssemblyInfo.cs
+/home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.csproj.CoreCompileInputs.cache
+/home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.exe
+/home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.pdb
