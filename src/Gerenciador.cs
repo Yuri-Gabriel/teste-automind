@@ -9,15 +9,20 @@ class Gerenciador {
         this.list = new List<Usuario>();
     }
 
+    public int numeroUsuarios() {
+        return this.list.lenght;
+    }
+
     public void addUsuario(string nome, string email, int idade) {
         try {
-            if(idade < 0 || idade > 100) throw new Exception($"ERRO => Gerenciar.addUsuario(): Idade inválida -> {idade}");
+            if(idade <= 0 || idade > 100) throw new Exception($"ERRO => Gerenciar.addUsuario(): Idade inválida -> {idade}");
             if(nome.Trim().Equals("")) throw new Exception($"ERRO => Gerenciar.addUsuario(): Nome inválido -> {nome}");
             if(!this.validateEmail(email.Trim())) throw new Exception($"=> Gerenciar.addUsuario(): Email inválido -> {email}");
             if(this.emailExist(email)) throw new Exception($"ERRO => Gerenciar.addUsuario(): Email já cadastrado -> {email}");
-
+            //Console.WriteLine(nome + email + idade);
             Usuario user = new Usuario(nome, email, idade);
             this.list.add(user);
+            //Console.WriteLine(nome + email + idade);
 
         } catch (Exception err) {
             Console.WriteLine(err.Message);
@@ -41,6 +46,10 @@ class Gerenciador {
     }
 
     public void exibirUmUsuario(string email) {
+        if(this.list.isEmpty()) {
+            Console.WriteLine("Não foi cadastrado nenhum usuario");
+            return;
+        }
         try {
             if(!this.validateEmail(email.Trim())) throw new Exception($"ERRO => Gerenciar.exibirUmUsuario(): Email inválido -> {email}");
             if(!this.emailExist(email)) throw new Exception($"ERRO => Gerenciar.exibirUmUsuario(): O email informado não entá cadastrado -> {email}");
@@ -67,8 +76,13 @@ class Gerenciador {
     }
 
     public void removerUsuario(string email) {
+        if(this.list.isEmpty()) {
+            Console.WriteLine("Não foi cadastrado nenhum usuario");
+            return;
+        }
         try {
-            if(!this.validateEmail(email.Trim())) throw new Exception($"ERRO => Gerenciar.addUsuario(): Email inválido -> {email}");
+            if(!this.validateEmail(email.Trim())) throw new Exception($"ERRO => Gerenciar.removerUsuario(): Email inválido -> {email}");
+            if(!this.emailExist(email)) throw new Exception($"ERRO => Gerenciar.removerUsuario(): O email informado não foi cadastrado -> {email}");
 
             int index = 0;
             bool find = false;
@@ -89,6 +103,10 @@ class Gerenciador {
     }
 
     public void exibirUsuarios() {
+        if(this.list.isEmpty()) {
+            Console.WriteLine("Não foi cadastrado nenhum usuario");
+            return;
+        }
         int index = 0;
         Console.WriteLine("---------------------Todos os usuarios----------------------");
         this.list.forEach(value => {

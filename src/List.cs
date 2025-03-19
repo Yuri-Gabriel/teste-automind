@@ -2,7 +2,7 @@ namespace MyProject;
 
 class List<T> {
     private Node<T>? head;
-    private int lenght;
+    public int lenght;
 
     public List() {
         this.head = null;
@@ -19,7 +19,7 @@ class List<T> {
                     Node<T>? newNode = new Node<T>(value);
                     newNode.prev = current;
                     current.next = newNode;
-                    this.lenght++;
+                    this.lenght += 1;
                     break;
                 }
                 current = current.next;
@@ -62,7 +62,7 @@ class List<T> {
                         current.next.prev = current.prev;
                     }
                     this.updateNodeIndex();
-                    this.lenght--;
+                    this.lenght -= 1;
                     break;
                 }
                 current = current.next;
@@ -83,7 +83,11 @@ class List<T> {
 		}
     }
 
-    public void forEach(Action<T?> action) {
+    public bool isEmpty() {
+        return this.lenght == 0;
+    }
+
+    public void forEach(Action<T> action) {
         Node<T>? current = this.head;
 		while(current != null) {
 			action(current.value);

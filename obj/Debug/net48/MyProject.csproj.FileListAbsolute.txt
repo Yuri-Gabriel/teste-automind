@@ -26,3 +26,6 @@
 /home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.csproj.CoreCompileInputs.cache
 /home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.exe
 /home/diuri/Documentos/teste-automind-main/obj/Debug/net48/MyProject.pdb
+/home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.sourcelink.json
+/home/diuri/Documentos/csharp/MyProject/bin/Debug/net48/MyProject.xml
+/home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.xml

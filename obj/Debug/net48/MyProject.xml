@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyProject</name>
+    </assembly>
+    <members>
+        <member name="M:MyProject.Gerenciador.getUsuario(System.Int32)">
+            <summary>
+                Pegar os dados de um usuario em especifico
+            </summary>
+            
+            <param name="index">
+                Indice do elemento que deseja pegar os dados
+            </param>
+            
+            <returns>
+                Se for encontrado, irá retornar um objeto Usuario.
+            </returns>
+        </member>
+    </members>
+</doc>

@@ -420,11 +420,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/diuri/Documentos/teste-automind-main/MyProject.csproj",
+      "projectUniqueName": "/home/diuri/Documentos/csharp/MyProject/MyProject.csproj",
       "projectName": "MyProject",
-      "projectPath": "/home/diuri/Documentos/teste-automind-main/MyProject.csproj",
+      "projectPath": "/home/diuri/Documentos/csharp/MyProject/MyProject.csproj",
       "packagesPath": "/home/diuri/.nuget/packages/",
-      "outputPath": "/home/diuri/Documentos/teste-automind-main/obj/",
+      "outputPath": "/home/diuri/Documentos/csharp/MyProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/diuri/.nuget/NuGet/NuGet.Config"
