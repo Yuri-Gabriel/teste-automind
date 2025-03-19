@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = MyProject
-build_property.ProjectDir = /home/diuri/Documentos/csharp/MyProject/
+build_property.ProjectDir = /home/diuri/Documentos/teste-automind-main/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false
