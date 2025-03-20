@@ -29,3 +29,5 @@
 /home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.sourcelink.json
 /home/diuri/Documentos/csharp/MyProject/bin/Debug/net48/MyProject.xml
 /home/diuri/Documentos/csharp/MyProject/obj/Debug/net48/MyProject.xml
+/workspaces/teste-automind/bin/Debug/net48/MyProject.xml
+/workspaces/teste-automind/obj/Debug/net48/MyProject.xml

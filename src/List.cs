@@ -12,6 +12,7 @@ class List<T> {
     public void add(T value) {
         if(this.head == null) {
             this.head = new Node<T>(value);
+            this.lenght++;
         } else {
             Node<T>? current = this.head;
             while(current != null) {
@@ -19,7 +20,7 @@ class List<T> {
                     Node<T>? newNode = new Node<T>(value);
                     newNode.prev = current;
                     current.next = newNode;
-                    this.lenght += 1;
+                    this.lenght++;
                     break;
                 }
                 current = current.next;
@@ -52,17 +53,15 @@ class List<T> {
             Node<T>? current = this.head;
             while(current != null) {
                 if(current.index == index) {
-                    if (current.prev != null) {
+                    if (current.prev != null) { // Se o nó estiver no meio da lista
                         current.prev.next = current.next;
-                    } else {
+                    } else { // Se o nó for o primeiro da lista
                         this.head = current.next; 
                     }
-
-                    if (current.next != null) {
+                    if (current.next != null) { // Se o nó estiver no meio ou for o ultimo na lista
                         current.next.prev = current.prev;
                     }
-                    this.updateNodeIndex();
-                    this.lenght -= 1;
+                    this.lenght--;
                     break;
                 }
                 current = current.next;

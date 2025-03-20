@@ -19,10 +19,9 @@ class Gerenciador {
             if(nome.Trim().Equals("")) throw new Exception($"ERRO => Gerenciar.addUsuario(): Nome inválido -> {nome}");
             if(!this.validateEmail(email.Trim())) throw new Exception($"=> Gerenciar.addUsuario(): Email inválido -> {email}");
             if(this.emailExist(email)) throw new Exception($"ERRO => Gerenciar.addUsuario(): Email já cadastrado -> {email}");
-            //Console.WriteLine(nome + email + idade);
+            
             Usuario user = new Usuario(nome, email, idade);
             this.list.add(user);
-            //Console.WriteLine(nome + email + idade);
 
         } catch (Exception err) {
             Console.WriteLine(err.Message);
@@ -45,9 +44,13 @@ class Gerenciador {
         return this.list.get(index);
     }
 
+    public bool existeCadastro() {
+        return !this.list.isEmpty();
+    }
+
     public void exibirUmUsuario(string email) {
         if(this.list.isEmpty()) {
-            Console.WriteLine("Não foi cadastrado nenhum usuario");
+            Console.WriteLine("Não há nenhum usuario");
             return;
         }
         try {
@@ -58,7 +61,6 @@ class Gerenciador {
             this.list.forEach(value => {
                 if(value.email.Equals(email)) {
                     user = value;
-                    return;
                 }
             });
             if(user != null) {
@@ -75,9 +77,33 @@ class Gerenciador {
         }
     }
 
+    public Usuario? editarUsuario(string email) {
+        if(this.list.isEmpty()) {
+            Console.WriteLine("Não há nenhum usuario");
+            return null;
+        }
+        Usuario? user = null;
+        try {
+            if(!this.validateEmail(email.Trim())) throw new Exception($"ERRO => Gerenciar.removerUsuario(): Email inválido -> {email}");
+            if(!this.emailExist(email)) throw new Exception($"ERRO => Gerenciar.removerUsuario(): O email informado não foi cadastrado -> {email}");
+
+           
+            this.list.forEach(value => {
+                if(value.email.Equals(email)) {
+                    user = value;
+                }
+            });
+            
+        } catch (Exception err) {
+            Console.WriteLine(err.Message);
+            return null;
+        }
+        return user;
+    }
+
     public void removerUsuario(string email) {
         if(this.list.isEmpty()) {
-            Console.WriteLine("Não foi cadastrado nenhum usuario");
+            Console.WriteLine("Não há nenhum usuario");
             return;
         }
         try {
@@ -104,14 +130,12 @@ class Gerenciador {
 
     public void exibirUsuarios() {
         if(this.list.isEmpty()) {
-            Console.WriteLine("Não foi cadastrado nenhum usuario");
+            Console.WriteLine("Não há nenhum usuario");
             return;
         }
-        int index = 0;
         Console.WriteLine("---------------------Todos os usuarios----------------------");
         this.list.forEach(value => {
-            Console.WriteLine($"Indice: {index} | Nome: {value.nome} | Email: {value.email} | Idade: {value.idade}");
-            index++;
+            Console.WriteLine($"Nome: {value.nome} | Email: {value.email} | Idade: {value.idade}");
         });
         Console.WriteLine("------------------------------------------------------------");
     }

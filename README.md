@@ -8,18 +8,18 @@ Criar um pequeno sistema de cadastro de usuarios utilizando a linguagem C# e .Ne
 ### Classes
 O projeto foi codificado em torno das classes: 
 
-- **Program** (classe principal para que oprograma funcione)
-- **Gerenciador** (classe responsável por gerenciar a lista de usuarios)
-- **Usuario** (classe que representa um usuario)
-- **List** (classe que implementa a lógica de uma lista duplamnte encadeada)
-- **Node** (clase que representa o nó da lista)
+- **Program** (Classe principal para que oprograma funcione)
+- **Exibicao** (Classe responsável por exibir as opções de interação no terminal)
+- **Gerenciador** (Classe responsável por gerenciar a lista de usuarios)
+- **Usuario** (Classe que representa um usuario)
+- **List** (Classe que implementa a lógica de uma lista duplamnte encadeada)
+- **Node** (Clase que representa o nó da lista)
 
 ### Funcionalidades
 
-#### Cadastrar um usuario
-É possivel criar um usuario seguindo o código abaixo:
-
-`Gerenciador g = new Gerenciador();` <br>
-`g.addUsuario("yuri", "yuri@1234gmail.com", 18);`
+- Cadastro de usuario
+- Listagem de usuarios
+- Buscar apenas um usuario
+- Remover um usuario
 
 
