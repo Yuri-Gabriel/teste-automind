@@ -1,5 +1,9 @@
 namespace MyProject;
 
+/// <summary>
+///     Classe que implementa uma lista duplamente encadeada
+/// </summary>
+/// <typeparam name="T">Tipo que será usado para o valor inserido nos nós da lista</typeparam>
 class List<T> {
     private Node<T>? head;
     public int lenght;

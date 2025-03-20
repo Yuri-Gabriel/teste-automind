@@ -1,5 +1,8 @@
 namespace MyProject;
 
+/// <summary>
+///     Classe que exibe as opções no terminal para a interação com o programa
+/// </summary>
 class Exibicao {
 
     private Gerenciador g;
@@ -7,6 +10,9 @@ class Exibicao {
         this.g = new Gerenciador();
     }
 
+    /// <summary>
+    ///     Inicia o a visualização do projeto no terminal
+    /// </summary>
     public void start() {
         int option = 0;
         do {
@@ -103,6 +109,11 @@ class Exibicao {
         } while (option != 0);
     }
 
+    /// <summary>
+    ///     Exibe as opções para editar um usuario em específico
+    /// </summary>
+    /// <param name="user">Instância do usuario que deseja editar</param>
+    /// <returns>Retorna um <c>int</c> para dar continuidade na navegação</returns>
     private int editarUsuario(Usuario? user) {
         if(user == null) {
             return 3;
@@ -156,6 +167,11 @@ class Exibicao {
         return option;
     }
 
+    /// <summary>
+    ///     Pegar o input do terminal, faz verificações e o retorna
+    /// </summary>
+    /// <param name="maxValue">Valor máximo que pode ser inserido</param>
+    /// <returns>O valor <c>int</c> inserido no terminal</returns>
     private int getInputOption(int maxValue) {
         int option = -1;
         do {

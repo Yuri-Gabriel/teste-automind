@@ -1,7 +1,7 @@
-using System.Text.RegularExpressions;
-
 namespace MyProject;
-
+/// <summary>
+///     Classe que representa o usuario a ser cadastrado
+/// </summary>
 class Usuario {
     public string nome {get; set;}
     public string email {get; set;}

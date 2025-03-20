@@ -8,7 +8,7 @@ Criar um pequeno sistema de cadastro de usuarios utilizando a linguagem C# e .Ne
 ### Classes
 O projeto foi codificado em torno das classes: 
 
-- **Program** (Classe principal para que oprograma funcione)
+- **Program** (Classe principal para que o programa funcione)
 - **Exibicao** (Classe responsável por exibir as opções de interação no terminal)
 - **Gerenciador** (Classe responsável por gerenciar a lista de usuarios)
 - **Usuario** (Classe que representa um usuario)
@@ -21,5 +21,5 @@ O projeto foi codificado em torno das classes:
 - Listagem de usuarios
 - Buscar apenas um usuario
 - Remover um usuario
-
+- Edição de usuario
 

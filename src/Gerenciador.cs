@@ -2,6 +2,9 @@ using System.Text.RegularExpressions;
 
 namespace MyProject;
 
+/// <summary>
+///     Classe que gerencia o cadastro dos usuarios
+/// </summary>
 class Gerenciador {
     private List<Usuario> list;
 
@@ -9,15 +12,17 @@ class Gerenciador {
         this.list = new List<Usuario>();
     }
 
-    public int numeroUsuarios() {
-        return this.list.lenght;
-    }
-
+    /// <summary>
+    ///     Cadastra um novo usuario no sistema
+    /// </summary>
+    /// <param name="nome">Nome do novo usuario</param>
+    /// <param name="email">Email do novo usuario</param>
+    /// <param name="idade">Idade do novo usuario</param>
     public void addUsuario(string nome, string email, int idade) {
         try {
             if(idade <= 0 || idade > 100) throw new Exception($"ERRO => Gerenciar.addUsuario(): Idade inválida -> {idade}");
             if(nome.Trim().Equals("")) throw new Exception($"ERRO => Gerenciar.addUsuario(): Nome inválido -> {nome}");
-            if(!this.validateEmail(email.Trim())) throw new Exception($"=> Gerenciar.addUsuario(): Email inválido -> {email}");
+            if(!this.validateEmail(email.Trim())) throw new Exception($"ERRO => Gerenciar.addUsuario(): Email inválido -> {email}");
             if(this.emailExist(email)) throw new Exception($"ERRO => Gerenciar.addUsuario(): Email já cadastrado -> {email}");
             
             Usuario user = new Usuario(nome, email, idade);
@@ -30,24 +35,30 @@ class Gerenciador {
     }
     
     /// <summary>
-    ///     Pegar os dados de um usuario em especifico
+    ///     Pega os dados de um usuário específico.
     /// </summary>
-    /// 
-    /// <param name="index">
-    ///     Indice do elemento que deseja pegar os dados
-    /// </param>
-    /// 
+    /// <param name="index">Índice do usuário na lista.</param>
     /// <returns>
-    ///     Se for encontrado, irá retornar um objeto Usuario.
+    ///      O objeto <see cref="Usuario"/> se encontrado; caso contrário, <c>null</c>.
     /// </returns>
     public Usuario? getUsuario(int index) {
         return this.list.get(index);
     }
 
+    /// <summary>
+    ///     Informa de existe algum usuario cadastro
+    /// </summary>
+    /// <returns>
+    ///      Caso exista cadastro retorna <c>true</c>, caso contrario, <c>false</c>
+    /// </returns>
     public bool existeCadastro() {
         return !this.list.isEmpty();
     }
 
+    /// <summary>
+    ///     Busca e exibe informações de um usuario em específico
+    /// </summary>
+    /// <param name="email">Email do usuario que deseja buscar</param>
     public void exibirUmUsuario(string email) {
         if(this.list.isEmpty()) {
             Console.WriteLine("Não há nenhum usuario");
@@ -77,6 +88,13 @@ class Gerenciador {
         }
     }
 
+    /// <summary>
+    ///     Busca o usuario que deseja editar os dados
+    /// </summary>
+    /// <param name="email">Email do usuario que deseja editar</param>
+    /// <returns>
+    ///     Caso encontre, retorna a instância do usuario buscado, caso contrario, <c>null</c>
+    /// </returns>
     public Usuario? editarUsuario(string email) {
         if(this.list.isEmpty()) {
             Console.WriteLine("Não há nenhum usuario");
@@ -101,6 +119,10 @@ class Gerenciador {
         return user;
     }
 
+    /// <summary>
+    ///     Busca e remove o cadastro do usuario desejado
+    /// </summary>
+    /// <param name="email">Email do usuario que deseja remover</param>
     public void removerUsuario(string email) {
         if(this.list.isEmpty()) {
             Console.WriteLine("Não há nenhum usuario");
@@ -128,6 +150,9 @@ class Gerenciador {
         }
     }
 
+    /// <summary>
+    ///     Exibi os dados de todos os usuarios cadastrados
+    /// </summary>
     public void exibirUsuarios() {
         if(this.list.isEmpty()) {
             Console.WriteLine("Não há nenhum usuario");
@@ -140,12 +165,26 @@ class Gerenciador {
         Console.WriteLine("------------------------------------------------------------");
     }
 
+    /// <summary>
+    ///     Verifica se o email enviado é válido
+    /// </summary>
+    /// <param name="email">Email a ser verificado</param>
+    /// <returns>
+    ///     Caso seja válido, retorna <c>true</c>, caso contrario, <c>false</c>
+    /// </returns>
     private bool validateEmail(string email) {
         Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         Match match = regex.Match(email);
         return match.Success;
     }
 
+    /// <summary>
+    ///     Verifica se o email enviado já foi cadastrado
+    /// </summary>
+    /// <param name="email">Email a ser verificado</param>
+    /// <returns>
+    ///     Caso seja encontrado, retorna <c>true</c>, caso contrario, <c>false</c>
+    /// </returns>
     private bool emailExist(string email) {
         bool exist = false;
         try {
